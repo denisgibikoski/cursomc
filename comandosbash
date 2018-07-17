@@ -1,0 +1,49 @@
+dircolors: /home/denis/.solarized/dircolors.ansi-dark: Arquivo ou diretório não encontrado
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master ●  git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (utilize "git checkout -- <arquivo>..." para descartar mudanças no diretório de trabalho)
+
+	modified:   src/main/java/com/denis/cursosmc/resources/CategoriaResource.java
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+
+	src/main/java/com/denis/cursosmc/domain/
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master ●  git add . 
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master ✚  git status
+No ramo master
+Your branch is up to date with 'origin/master'.
+
+Mudanças a serem submetidas:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   src/main/java/com/denis/cursosmc/domain/Categoria.java
+	modified:   src/main/java/com/denis/cursosmc/resources/CategoriaResource.java
+
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master ✚  git push  
+Username for 'https://github.com': denisgibikoski
+Password for 'https://denisgibikoski@github.com': 
+Everything up-to-date
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master ✚  git commit -m"mandando lista"
+[master c973caa] mandando lista
+ 2 files changed, 89 insertions(+), 2 deletions(-)
+ create mode 100644 src/main/java/com/denis/cursosmc/domain/Categoria.java
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master  git push                     
+Username for 'https://github.com': denisgibikoski
+Password for 'https://denisgibikoski@github.com': 
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.46 KiB | 1.46 MiB/s, done.
+Total 12 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/denisgibikoski/cursomc.git
+   5f9f1a2..c973caa  master -> master
+ denis@denis  ~/Documentos/Cursos Udemy/cursomc   master  
