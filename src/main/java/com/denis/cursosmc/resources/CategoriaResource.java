@@ -12,5 +12,12 @@ public class CategoriaResource {
 	public String Listar() {
 		return "Rest esta Funcionanto!";
 	}
+	
+	@RequestMapping(method=RequestMethod.POST)
+	public String setTest(String test) {
+	System.out.println(test);
+	return test;
+		
+	}
 
 }
