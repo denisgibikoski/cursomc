@@ -39,6 +39,12 @@ public class CategoriaService {
 		return obj;
 	}
 
+	public void delete(Integer id) {
+		
+		repo.deleteById(id);
+		
+	}
+
 	
 
 	
