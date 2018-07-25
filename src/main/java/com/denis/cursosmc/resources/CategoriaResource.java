@@ -1,6 +1,7 @@
 package com.denis.cursosmc.resources;
 
 import java.net.URI;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,14 +23,28 @@ public class CategoriaResource {
 
 	@Autowired
 	private CategoriaService service;
+	
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) throws ObjectNotFoundException {
 
-		Categoria obj = service.buscar(id);
+		Categoria obj = service.find(id);
 
 		return ResponseEntity.ok().body(obj);
 	}
+	
+	
+	//Criacao Propria
+	@RequestMapping(value = "/all",method = RequestMethod.GET)
+	public ResponseEntity<?> findAll() throws ObjectNotFoundException {
+
+	 List<Categoria> obj = service.findAll();
+		
+		return ResponseEntity.ok().body(obj);
+	}
+	
+	
+	
 
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody Categoria obj) {
@@ -39,5 +54,16 @@ public class CategoriaResource {
 		return ResponseEntity.created(uri).build();
 
 	}
+	@RequestMapping(value = "/{id}", method=RequestMethod.PUT)
+	public ResponseEntity<Void> uptade(@PathVariable Integer id , 
+			@RequestBody Categoria obj) throws ObjectNotFoundException {
+		obj.setId(id);
+		obj = service.update(obj);
+		
+		return ResponseEntity.noContent().build();
+	}
+	
+	
+	
 
 }
